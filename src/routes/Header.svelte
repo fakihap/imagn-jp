@@ -1,14 +1,24 @@
 <script>
 	import { page } from '$app/stores';
 	import './styles.css';
-	import logo from '$lib/images/svelte-logo.svg';
+	import logo from '$lib/images/nature.me.png';
 	import github from '$lib/images/github.svg';
+  	// import { onMount } from 'svelte';
+
+// 	/**
+//    * @type {number | undefined}
+//    */
+// 	let windowYScrollAmount;
+// 	onMount(() => {
+// 		const window = document.querySelector('window');
+// 		windowYScrollAmount = document.
+// 	})
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+	<div class="logo">
+		<a href="/">
+			<img src={logo} alt="nature.me" />
 		</a>
 	</div>
 
@@ -40,29 +50,32 @@
 
 <style>
 	header {
+		position:fixed;
+		top: 0px;
+
 		display: flex;
 		justify-content: space-between;
-
-		padding: var(--column-padding-horizontal);
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
 		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
+		
+		width: 100svw;
+		height: var(--nav-height);
+		padding: 0 10rem;
+
+		/* background-color: #eeeeee; */
+
+		backdrop-filter: blur(2px);
+		box-shadow: 0 2px 10px rgb(0 0 0 / 10%), 0 10px 15px rgb(0 0 0 / 20%);
+		box-sizing: border-box;
+		background-image: linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0));
+		mix-blend-mode: hard-light;
 	}
 
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
+	.logo {
+		width: 10rem;
+	}
+
+	.logo a img {
+		width: 100%;
 	}
 
 	nav {
