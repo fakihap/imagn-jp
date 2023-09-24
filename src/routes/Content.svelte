@@ -6,6 +6,7 @@
    import tokyo_1 from '$lib/images/yoav-aziz-tKCd-IWc4gI-unsplash.jpg';
    import tokyo_2 from '$lib/images/vista-wei-OiERUvVrioU-unsplash.jpg';
    
+   import jpn_end from '$lib/images/rap-dela-rea-NgMqApxnf_8-unsplash.jpg';
 </script>
 
 <div>
@@ -21,6 +22,11 @@
         <img id="img5"src={tokyo_2} alt="tokyo2" />
         <div>LOST IN <br/> TOKYO</div>
     </div>
+
+    <a href="/library" class="collage3">
+        <img id="imgend" src={jpn_end} alt="ending greet" />
+        <div>FIND<br/>YOURS</div>
+    </a>
 </div>
 
 
@@ -46,7 +52,7 @@
 
     .collage2 {
         width: 100vw;
-        height: 140vh;
+        height: 160vh;
 
         position: absolute;
         left: 0;
@@ -64,6 +70,31 @@
         font-size: 3rem;
         color: var(--color-text-white);
         letter-spacing: .5rem;
+    }
+
+    .collage3 {
+        width: 100vw;
+        height: 100vh;
+
+        position: absolute;
+        top: 400vh;
+        left: 0;
+        cursor: pointer;
+    }
+
+    .collage3 div {
+        position: relative;
+        top: 50vh;
+        font-size: 6rem;
+        color: var(--color-text-white);
+        text-align: center;
+        opacity: 0;
+
+        transition: 0.3s;
+    }
+
+    .collage3:hover div {
+        opacity: 1;
     }
 
     #img1, 
@@ -103,5 +134,23 @@
         width: 45vw;
         left: 55vw;
         top: 25vh;
+    }
+
+    #imgend {
+        object-fit: cover;
+        position: absolute;
+
+        width: 100vw;
+        height: 100vh;
+        /*height: 100vh;
+        top: 390vh;
+        left: 0; */
+
+        filter: none;
+        transition: 0.3s;
+    }
+
+    .collage3:hover #imgend {
+        filter: blur(4px);
     }
 </style>
