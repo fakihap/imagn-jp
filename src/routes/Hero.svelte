@@ -39,6 +39,12 @@
 
     .accent {
         color: var(--color-theme-1);
+
+        transition: 0.3s;
+    }
+
+    .accent:hover {
+        text-shadow: var(--color-theme-1) 0 0 20px;
     }
 
 </style>

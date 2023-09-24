@@ -52,6 +52,7 @@
 	header {
 		position:fixed;
 		top: 0px;
+		z-index: 10;
 
 		display: flex;
 		justify-content: space-between;
