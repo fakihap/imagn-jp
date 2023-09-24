@@ -9,7 +9,7 @@
    import jpn_end from '$lib/images/rap-dela-rea-NgMqApxnf_8-unsplash.jpg';
 </script>
 
-<div>
+<div class="content">
     <div class="collage1">
         <img id="img1" src={kyoto_1} alt="kyoto1" />
         <img id="img2"src={kyoto_2} alt="kyoto2" />
@@ -25,12 +25,16 @@
 
     <a href="/library" class="collage3">
         <img id="imgend" src={jpn_end} alt="ending greet" />
-        <div>FIND<br/>YOURS</div>
+        <div>FIND<br/>YOURS<br/>NOW</div>
     </a>
 </div>
 
 
 <style>
+    .content {
+        height: 400vh;
+        width: 100vw;
+    }
     .collage1 {
         position: absolute;
         left: 0;
@@ -84,10 +88,11 @@
 
     .collage3 div {
         position: relative;
-        top: 50vh;
+        top: 35%;
         font-size: 6rem;
         color: var(--color-text-white);
         text-align: center;
+        vertical-align: middle;
         opacity: 0;
 
         transition: 0.3s;
@@ -152,5 +157,6 @@
 
     .collage3:hover #imgend {
         filter: blur(4px);
+        transform: scale(1.1, 1.1);
     }
 </style>
