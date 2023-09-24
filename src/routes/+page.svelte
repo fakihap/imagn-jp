@@ -14,9 +14,6 @@
 <section>
 	<Hero />
 
-	<div class="more">
-		Learns More
-	</div>
 </section>
 
 <style>

@@ -8,8 +8,13 @@
     </div>
     <div class="hero-headline">
         <div id="headline"><span class="accent">Discover</span> Japan.</div>
-        <div>a personal library</div>
+        <div>a personal library</div>    
+
+        <div class="more">
+            <a href="/#hook">Learn More</a>
+        </div>
     </div>
+    
 </div>
 
 <style>
@@ -45,6 +50,32 @@
 
     .accent:hover {
         text-shadow: var(--color-theme-1) 0 0 20px;
+        letter-spacing: .6rem;
+    }
+
+    .more {
+        background-color: var(--color-theme-1);
+        border-radius: 30px;
+
+        width: max-content;
+        height: max-content;
+
+        padding: .5rem .8rem;
+        margin: 1.3rem 1rem;
+
+        text-decoration: none;
+        font-size: 1.6rem;
+        
+        box-shadow: black 0 0 10px;
+    }
+
+    .more:hover {
+        box-shadow: var(--color-theme-1) 0 0 20px;
+    }
+
+    .more a {
+        color: white;
+        text-decoration: none;
     }
 
 </style>
