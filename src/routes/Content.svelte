@@ -7,6 +7,58 @@
    import tokyo_2 from '$lib/images/vista-wei-OiERUvVrioU-unsplash.jpg';
    
    import jpn_end from '$lib/images/rap-dela-rea-NgMqApxnf_8-unsplash.jpg';
+
+   import {gsap} from 'gsap'; 
+   import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+   import {onMount} from 'svelte';
+
+   onMount(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from('#img1', {
+        x: -700,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#img1",
+            start: "top 100%",
+            end: "top 0",
+            toggleActions: "restart none none reset",
+        },
+    })
+
+    gsap.from('#img2', {
+        y: 700,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#img2",
+            start: "top 100%",
+            end: "top 20%",
+            toggleActions: "restart none none reset",
+        },
+    })
+
+    gsap.from('#img3', {
+        x: 700,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#img3",
+            start: "top 100%",
+            end: "top 20%",
+            toggleActions: "restart none none reset",
+        },
+    })
+
+    gsap.from('.collage1 div', {
+        opacity: 0,
+        duration: 3,
+        scrollTrigger: {
+            trigger: ".collage1 div",
+            start: "top 100%",
+            end: "top 20%",
+            toggleActions: "restart none none reset",
+        },
+    })
+   })
 </script>
 
 <div class="content">
@@ -46,7 +98,7 @@
         width: var(--width);
         text-align: center;
         position: relative;
-        left: calc( (100vw - var(--width)) / 2 + 5vw);
+        left: calc( (100vw - var(--width)) / 2);
         top: 77vh;
 
         font-size: 3rem;
