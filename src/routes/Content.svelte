@@ -161,6 +161,7 @@
     #img5 {
         object-fit: contain;
         position: absolute;
+
     }
 
     #img1 {
@@ -182,15 +183,36 @@
     }
 
     #img4 {
-        width: 55vw;
         left: 0;
         top: 20vh;
     }
 
     #img5 {
-        width: 45vw;
-        left: 55vw;
+        left: 50vw;
         top: 25vh;
+
+        filter:brightness(.8);
+    }
+
+    #img4,
+    #img5 {
+        width: 50vw;
+
+        transition: 0.3s;
+    }
+
+    #img4:hover,
+    #img5:hover {
+        width: 55vw;
+    }
+
+    #img4:hover ~ #img5 {
+        left: 55vw;
+        width: 45vw;
+    }
+
+    #img4:has(#img5:hover) {
+        width: 45vw;
     }
 
     #imgend {
