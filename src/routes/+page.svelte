@@ -12,10 +12,13 @@
 </svelte:head>
 
 <section>
-	
 	<hero>
 		<img id="hero-bg" src={hero_bg} alt="background hero"/>
 	</hero>
+	<div class="hero-headline">
+		<div id="headline">Nature speaks.</div>
+		<div>a personal library</div>
+	</div>
 </section>
 
 <style>
@@ -58,5 +61,18 @@
 		/* object-position: 0 0rem; */
 	}
 
+	.hero-headline {
+		position: absolute;
+		top: 65vh;
+		left: 15vw;
+		color: var(--color-text-white);
+		text-shadow: black 0px 2px 10px;
+		font-size: 1.4rem;
+	}
+
+	.hero-headline #headline {
+		font-size: var(--font-size-headline);
+		letter-spacing: .8rem;
+	}
 
 </style>
