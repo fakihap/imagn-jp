@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import './styles.css';
-	import logo from '$lib/images/nature.me.png';
+	import logo from '$lib/images/imagn.jp.png';
 	import github from '$lib/images/github.svg';
   	// import { onMount } from 'svelte';
 
@@ -72,7 +72,7 @@
 
 	.logo {
 		width: 10rem;
-	}
+	}	
 
 	.logo a img {
 		width: 100%;
@@ -102,15 +102,34 @@
 	}
 
 	li[aria-current='page']::before {
-		--size: 6px;
+		--size: 3px;
+		--width-prc: 80%;
 		content: '';
-		width: 0;
-		height: 0;
+		width: var(--width-prc);
+		height: var(--size);
+		background: var(--color-theme-1);
 		position: absolute;
 		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
+		left: calc((100% - var(--width-prc)) / 2);	
+	}
+
+	li::before {
+		--size: 3px;
+		content: '';
+		width: 0;
+		height: var(--size);
+		background: var(--color-theme-1);
+		position: absolute;
+		top: .4rem;
+		
+
+		transition: .3s;
+	}
+
+	li:hover::before {
+		--width-prc: 80%;
+		width: var(--width-prc);
+		left: calc((100% - var(--width-prc)) / 2);	
 	}
 
 	nav a {
@@ -118,15 +137,16 @@
 		height: 100%;
 		align-items: center;
 		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
+		color: var(--color-text-white);
+		font-weight: 300;
 		font-size: var(--font-size-navitem);
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
 	}
 
-	a:hover {
+	nav a:hover {
+		font-weight: 500;
 		color: var(--color-theme-1);
 	}
 </style>
