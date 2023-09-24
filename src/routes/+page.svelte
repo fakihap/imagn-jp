@@ -12,10 +12,7 @@
 <section>
 	<h1>
 		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
+			sad
 		</span>
 
 		to your new<br />SvelteKit app
@@ -49,11 +46,5 @@
 		padding: 0 0 calc(100% * 495 / 2048) 0;
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+
 </style>
