@@ -11,7 +11,7 @@
         <div>a personal library</div>    
 
         <div class="more">
-            <a href="/#hook">Learn More</a>
+            <a href="/#hook">Learn More >></a>
         </div>
     </div>
     
@@ -61,7 +61,7 @@
         height: max-content;
 
         padding: .5rem .8rem;
-        margin: 1.3rem 1rem;
+        margin: 1.7rem 1rem;
 
         text-decoration: none;
         font-size: 1.6rem;
