@@ -11,7 +11,7 @@
         <div>a personal library</div>    
 
         <div class="more">
-            <a href="/#hook">Learn More >></a>
+            <a href="/#img3">Learn More >></a>
         </div>
     </div>
     
