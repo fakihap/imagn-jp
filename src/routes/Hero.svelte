@@ -7,7 +7,7 @@
         <img id="hero-bg" src={hero_bg} alt="background hero"/>
     </div>
     <div class="hero-headline">
-        <div id="headline">Nature speaks.</div>
+        <div id="headline"><span class="accent">Discover</span> Japan.</div>
         <div>a personal library</div>
     </div>
 </div>
@@ -34,7 +34,11 @@
 
 	.hero-headline #headline {
 		font-size: var(--font-size-headline);
-		letter-spacing: .8rem;
+		letter-spacing: .5rem;
 	}
+
+    .accent {
+        color: var(--color-theme-1);
+    }
 
 </style>
